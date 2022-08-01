@@ -1,7 +1,7 @@
 name: en_card_swiper
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/meetitexpert/en_card_swiper
 
 environment:
   sdk: ">=2.17.1 <3.0.0"

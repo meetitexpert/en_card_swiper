@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../card_swiper.dart';
+import '../en_card_swiper.dart';
 
-class FractionPaginationBuilder extends SwiperPlugin {
+class FractionPaginationBuilder extends ENSwiperPlugin {
   ///color ,if set null , will be Theme.of(context).scaffoldBackgroundColor
   final Color? color;
 
@@ -71,7 +71,7 @@ class FractionPaginationBuilder extends SwiperPlugin {
   }
 }
 
-class RectSwiperPaginationBuilder extends SwiperPlugin {
+class RectSwiperPaginationBuilder extends ENSwiperPlugin {
   ///color when current index,if set null , will be Theme.of(context).primaryColor
   final Color? activeColor;
 
@@ -145,7 +145,7 @@ class RectSwiperPaginationBuilder extends SwiperPlugin {
   }
 }
 
-class DotSwiperPaginationBuilder extends SwiperPlugin {
+class DotSwiperPaginationBuilder extends ENSwiperPlugin {
   ///color when current index,if set null , will be Theme.of(context).primaryColor
   final Color? activeColor;
 
@@ -243,7 +243,7 @@ typedef SwiperPaginationBuilder = Widget Function(
   SwiperPluginConfig config,
 );
 
-class SwiperCustomPagination extends SwiperPlugin {
+class SwiperCustomPagination extends ENSwiperPlugin {
   final SwiperPaginationBuilder builder;
 
   const SwiperCustomPagination({required this.builder});
@@ -254,14 +254,14 @@ class SwiperCustomPagination extends SwiperPlugin {
   }
 }
 
-class SwiperPagination extends SwiperPlugin {
+class ENSwiperPagination extends ENSwiperPlugin {
   /// dot style pagination
-  static const SwiperPlugin dots = DotSwiperPaginationBuilder();
+  static const ENSwiperPlugin dots = DotSwiperPaginationBuilder();
 
   /// fraction style pagination
-  static const SwiperPlugin fraction = FractionPaginationBuilder();
+  static const ENSwiperPlugin fraction = FractionPaginationBuilder();
 
-  static const SwiperPlugin rect = RectSwiperPaginationBuilder();
+  static const ENSwiperPlugin rect = RectSwiperPaginationBuilder();
 
   /// Alignment.bottomCenter by default when scrollDirection== Axis.horizontal
   /// Alignment.centerRight by default when scrollDirection== Axis.vertical
@@ -271,15 +271,15 @@ class SwiperPagination extends SwiperPlugin {
   final EdgeInsetsGeometry margin;
 
   /// Build the widget
-  final SwiperPlugin builder;
+  final ENSwiperPlugin builder;
 
   final Key? key;
 
-  const SwiperPagination({
+  const ENSwiperPagination({
     this.alignment,
     this.key,
     this.margin = const EdgeInsets.all(10.0),
-    this.builder = SwiperPagination.dots,
+    this.builder = ENSwiperPagination.dots,
   });
 
   @override

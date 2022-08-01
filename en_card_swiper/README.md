@@ -230,7 +230,7 @@ The `Controller` is used to control the `index` of the Swiper, start or stop aut
 ![](https://github.com/jzoom/images/raw/master/layout1.gif)
 
 ```dart
-Swiper(
+ENSwiper(
   itemBuilder: (BuildContext context, int index) {
     return Image.network(
       "https://via.placeholder.com/288x188",
