@@ -28,7 +28,7 @@ class FractionPaginationBuilder extends ENSwiperPlugin {
   });
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig? config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig? config) {
     final themeData = Theme.of(context);
     final activeColor = this.activeColor ?? themeData.primaryColor;
     final color = this.color ?? themeData.scaffoldBackgroundColor;
@@ -99,7 +99,7 @@ class RectSwiperPaginationBuilder extends ENSwiperPlugin {
   });
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig config) {
     final themeData = Theme.of(context);
     final activeColor = this.activeColor ?? themeData.primaryColor;
     final color = this.color ?? themeData.scaffoldBackgroundColor;
@@ -173,7 +173,7 @@ class DotSwiperPaginationBuilder extends ENSwiperPlugin {
   });
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig config) {
     if (config.itemCount > 20) {
       log(
         'The itemCount is too big, we suggest use FractionPaginationBuilder '
@@ -240,7 +240,7 @@ class DotSwiperPaginationBuilder extends ENSwiperPlugin {
 
 typedef SwiperPaginationBuilder = Widget Function(
   BuildContext context,
-  SwiperPluginConfig config,
+  ENSwiperPluginConfig config,
 );
 
 class SwiperCustomPagination extends ENSwiperPlugin {
@@ -249,7 +249,7 @@ class SwiperCustomPagination extends ENSwiperPlugin {
   const SwiperCustomPagination({required this.builder});
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig config) {
     return builder(context, config);
   }
 }
@@ -283,7 +283,7 @@ class ENSwiperPagination extends ENSwiperPlugin {
   });
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig config) {
     final defaultAlignment = config.scrollDirection == Axis.horizontal
         ? Alignment.bottomCenter
         : Alignment.centerRight;

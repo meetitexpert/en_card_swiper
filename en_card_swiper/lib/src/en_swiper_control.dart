@@ -1,7 +1,7 @@
 import 'package:en_card_swiper/en_card_swiper.dart';
 import 'package:flutter/material.dart';
 
-class SwiperControl extends SwiperPlugin {
+class ENSwiperControl extends ENSwiperPlugin {
   ///IconData for previous
   final IconData iconPrevious;
 
@@ -22,7 +22,7 @@ class SwiperControl extends SwiperPlugin {
 
   final Key? key;
 
-  const SwiperControl({
+  const ENSwiperControl({
     this.iconPrevious = Icons.arrow_back_ios,
     this.iconNext = Icons.arrow_forward_ios,
     this.color,
@@ -33,7 +33,7 @@ class SwiperControl extends SwiperPlugin {
   });
 
   Widget buildButton({
-    required SwiperPluginConfig? config,
+    required ENSwiperPluginConfig? config,
     required Color color,
     required IconData iconDaga,
     required int quarterTurns,
@@ -62,7 +62,7 @@ class SwiperControl extends SwiperPlugin {
   }
 
   @override
-  Widget build(BuildContext context, SwiperPluginConfig config) {
+  Widget build(BuildContext context, ENSwiperPluginConfig config) {
     final themeData = Theme.of(context);
 
     final color = this.color ?? themeData.primaryColor;

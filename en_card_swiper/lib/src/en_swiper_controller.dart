@@ -1,4 +1,4 @@
-import 'swiper_plugin.dart';
+import 'en_swiper_plugin.dart';
 import 'transformer_page_view/index_controller.dart';
 
 class SwipeIndexControllerEvent extends IndexControllerEventBase {
@@ -14,7 +14,7 @@ class BuildIndexControllerEvent extends IndexControllerEventBase {
     required bool animation,
     required this.config,
   }) : super(animation: animation);
-  final SwiperPluginConfig config;
+  final ENSwiperPluginConfig config;
 }
 
 class AutoPlaySwiperControllerEvent extends IndexControllerEventBase {
@@ -32,7 +32,7 @@ class AutoPlaySwiperControllerEvent extends IndexControllerEventBase {
   final bool autoplay;
 }
 
-class SwiperController extends IndexController {
+class ENSwiperController extends IndexController {
   void startAutoplay({bool animation = true}) {
     event = AutoPlaySwiperControllerEvent.start(animation: animation);
     notifyListeners();

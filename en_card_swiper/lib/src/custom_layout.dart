@@ -1,4 +1,4 @@
-part of 'swiper.dart';
+part of 'en_swiper.dart';
 
 abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
     with SingleTickerProviderStateMixin {
@@ -6,7 +6,7 @@ abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
   late double _swiperHeight;
   late Animation<double> _animation;
   late AnimationController _animationController;
-  SwiperController get _controller => widget.controller;
+  ENSwiperController get _controller => widget.controller;
   late int _startIndex;
   int? _animationCount;
   int _currentIndex = 0;
@@ -396,7 +396,7 @@ class _CustomLayoutSwiper extends _SubSwiper {
     int? index,
     required int itemCount,
     Axis? scrollDirection,
-    required SwiperController controller,
+    required ENSwiperController controller,
   }) : super(
             loop: loop,
             onIndexChanged: onIndexChanged,

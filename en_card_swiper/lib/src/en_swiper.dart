@@ -575,9 +575,9 @@ class _SwiperState extends _SwiperTimerMixin {
     }
   }
 
-  SwiperPluginConfig _ensureConfig(SwiperPluginConfig? config) {
+  ENSwiperPluginConfig _ensureConfig(ENSwiperPluginConfig? config) {
     final con = config ??
-        SwiperPluginConfig(
+        ENSwiperPluginConfig(
           outer: widget.outer,
           itemCount: widget.itemCount,
           layout: widget.layout,
@@ -611,7 +611,7 @@ class _SwiperState extends _SwiperTimerMixin {
   Widget build(BuildContext context) {
     final swiper = _buildSwiper();
     List<Widget>? listForStack;
-    SwiperPluginConfig? config;
+    ENSwiperPluginConfig? config;
     if (widget.control != null) {
       //Stack
       config = _ensureConfig(config);
@@ -660,7 +660,7 @@ class _SwiperState extends _SwiperTimerMixin {
   Widget _buildOuterPagination(
     ENSwiperPagination pagination,
     Widget swiper,
-    SwiperPluginConfig config,
+    ENSwiperPluginConfig config,
   ) {
     final list = <Widget>[];
     //Only support bottom yet!

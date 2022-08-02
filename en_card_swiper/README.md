@@ -2,7 +2,7 @@
 
 # card_swiper
 
-BTSwiper/Carousel for flutter, with multiple layouts, infinite loop. Compatible with Android & iOS.
+ENSwiper/Carousel for flutter, with multiple layouts, infinite loop. Compatible with Android & iOS.
 
 # New Features:Layout for pagination.
 
@@ -10,7 +10,7 @@ We are using this project [flutter_page_indicator](https://github.com/best-flutt
 
 #  New Features:PageTransformer
 
-Finally, we have `PageTransformer` like android, just set a `transformer` to `BTSwiper`,
+Finally, we have `PageTransformer` like android, just set a `transformer` to `ENSwiper`,
 it returns a widget that has been transformed. For now, only support for layout `DEFAULT`.
 Thanks to @FlutterRocks ,you've done great job 👏.
 

@@ -1,18 +1,18 @@
 import 'package:flutter/widgets.dart';
-import '../card_swiper.dart';
+import '../en_card_swiper.dart';
 
 /// plugin to display swiper components
 ///
-abstract class SwiperPlugin {
-  const SwiperPlugin();
+abstract class ENSwiperPlugin {
+  const ENSwiperPlugin();
 
-  Widget build(BuildContext context, SwiperPluginConfig config);
+  Widget build(BuildContext context, ENSwiperPluginConfig config);
 }
 
-class SwiperPluginConfig {
+class ENSwiperPluginConfig {
   final Axis scrollDirection;
   final AxisDirection? axisDirection;
-  final SwiperController controller;
+  final ENSwiperController controller;
   final int activeIndex;
   final int itemCount;
   final PageIndicatorLayout? indicatorLayout;
@@ -21,7 +21,7 @@ class SwiperPluginConfig {
   final PageController? pageController;
   final SwiperLayout? layout;
 
-  const SwiperPluginConfig({
+  const ENSwiperPluginConfig({
     required this.scrollDirection,
     required this.controller,
     required this.activeIndex,
@@ -36,8 +36,8 @@ class SwiperPluginConfig {
 }
 
 class SwiperPluginView extends StatelessWidget {
-  final SwiperPlugin plugin;
-  final SwiperPluginConfig config;
+  final ENSwiperPlugin plugin;
+  final ENSwiperPluginConfig config;
 
   const SwiperPluginView({
     Key? key,
